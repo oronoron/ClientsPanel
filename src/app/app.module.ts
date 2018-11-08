@@ -24,6 +24,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClientDetailsComponent } from './components/client-details/client-details.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import { ClientService } from './services/client.service';
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [ClientService],
+  providers: [ClientService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
